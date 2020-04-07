@@ -1,1 +1,10 @@
 browser-sync start --server --directory --files "**/*"
+
+
+
+<-----GIT----->
+git status
+git add .
+git status
+git commit -m "any comment added files"
+git push
