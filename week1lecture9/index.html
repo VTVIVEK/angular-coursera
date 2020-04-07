@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>hello Cousera</title>
+</head>
+<body ng-app="DIApp">
+    <div ng-controller="DIController">
+        <div>
+            <h1>Hello {{name}}</h1>
+            <input type="text" ng-model="name" ng-blur="upper();">
+        </div>
+    </div>
+</body>
+</html>
