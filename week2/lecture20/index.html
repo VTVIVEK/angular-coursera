@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingListApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Controller As Syntax</title>
+</head>
+<body>
+    <h1>Controller As Syntax</h1>
+    <div ng-controller="ShoppingListController1 as list1">
+        <input type="text" ng-model="list1.itemName" placeholder="Name">
+        <input type="text" ng-model="list1.itemQuantity" placeholder="Quantity">
+    <button ng-click="list1.addItem();">Add Item</button>
+    
+    <ol><li ng-repeat="item in list1.items">{{item.quantity}} of {{item.name}} - 
+        <button ng-click="list1.removeItem($index);">Remove</button></li></ol>
+        <p>Error : {{list1.errorMessage}}</p>
+    </div>
+    
+    <div ng-controller="ShoppingListController2 as list2">
+        <input type="text" ng-model="list2.itemName" placeholder="Name">
+        <input type="text" ng-model="list2.itemQuantity" placeholder="Quantity">
+    <button ng-click="list2.addItem();">Add Item</button>
+    
+    <ol><li ng-repeat="item in list2.items">{{item.quantity}} of {{item.name}} - 
+        <button ng-click="list2.removeItem($index);">Remove</button></li></ol>
+        <p>Error : {{list2.errorMessage}}</p>
+    </div>
+
+
+</body>
+</html>

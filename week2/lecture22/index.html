@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingListApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Controller As Syntax</title>
+</head>
+<body>
+    <h1>Controller As Syntax</h1>
+    <div ng-controller="ShoppingListController as list">
+        <input type="text" ng-model="list.itemName" placeholder="Name">
+        <input type="text" ng-model="list.itemQuantity" placeholder="Quantity">
+    <button ng-click="list.addItem();">Add Item</button>
+    
+    <ol><li ng-repeat="item in list.items">{{item.quantity}} of {{item.name}} - 
+        <button ng-click="list.removeItem($index);">Remove</button></li></ol>
+        <!-- <p ng-if="list.errorMessage">Error : {{ list.errorMessage }}</p> -->
+        <p ng-show="list.errorMessage">Error : {{ list.errorMessage }}</p>
+       <!--  <p ng-hide="list.errorMessage">Error : {{ list.errorMessage }}</p> -->
+    </div>
+
+</body>
+</html>
