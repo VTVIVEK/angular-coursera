@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MenuCategoriesApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Usiing $http</title>
+</head>
+<body>
+    <h1>List of Menu</h1>
+    <div ng-controller="MenuCategoriesController as menu">
+    <h1>Hello {{menu.name}}</h1>
+         <ul><li ng-repeat="category in menu.categories">(<a ng-click="menu.logMenuitems(category.short_name);" href="">{{category.short_name}}</a>) {{category.name}}</li></ul>
+    </div>
+</body>
+</html>

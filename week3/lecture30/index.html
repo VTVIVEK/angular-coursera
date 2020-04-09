@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingListDirectiveApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Template Expanding Directive</title>
+    <style type="text/css">
+        .error{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div ng-controller="ShoppingListController1 as list">
+        <input type="text" ng-model="list.itemName" placeholder="Name">
+        <input type="text" ng-model="list.itemQuantity" placeholder="Quantity">
+    <button ng-click="list.addItem();">Add Item</button>
+    <span>{{ list.lastRemoved }}</span>
+    
+    <shopping-list items="list.items" title="{{list.title}}"
+     bad-remove="list.removeItem" good-remove="list.removeItem(index)">
+         <span>Cookies Ohh Bhai maro Mujhe Marro {{list.cookieWarning}}</span>
+     </shopping-list>
+     <!-- <p ng-show="list.errorMessage">Error : {{list.errorMessage}}</p> -->
+    </div>
+</body>
+</html>

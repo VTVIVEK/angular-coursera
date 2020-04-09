@@ -1,0 +1,10 @@
+<h3>{{ list.title }}</h3>
+<ol>
+<li ng-repeat="item in list.items">
+{{item.quantity}} of {{item.name}}
+-<button ng-click="list.badRemove($index);">Bad Remove</button>
+<button ng-click="list.goodRemove({index:$index});">Good Remove</button>
+</li>
+</ol>
+<!-- <div ng-if="list.cookiesInList()">Warning!!!! Cookies Detected</div> -->
+<div class="error" ng-transclude></div>
