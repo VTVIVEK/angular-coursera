@@ -1,0 +1,17 @@
+<br>
+<br>
+<ul>
+<br>
+<div class="displaydiv alert alert-success" ng-repeat="item in menu.found">
+<li>
+<b>Name</b> - {{item.name}}
+<button style="float:right;" ng-click="menu.goodRemove({index:$index});" class="btn btn-danger btn-sm deletebutton">Don't want this one!</button>
+<!-- <span class="clearAll"></span> -->
+<br><small><b>Short Name</b> - {{item.short_name}}</small><br>
+<small><b>Description</b> - {{item.description}}.</small>
+</li>
+</div>
+<div ng-show="menu.error" class="alert alert-danger">
+  <strong>{{menu.error}}</strong>
+</div>
+</ul>

@@ -62,13 +62,6 @@ function ShoppingListDirectiveLink(scope, element, attrs, controller){
     }
 
 
-    function ListItemDescription(){
-      var ddo={
-        template:'{{item.quantity}} of {{item.name}}'
-      }
-      return ddo;
-    }  
-
     ShoppingListController1.$inject=['ShoppingListFactory'];
     function ShoppingListController1(ShoppingListFactory) {
 
